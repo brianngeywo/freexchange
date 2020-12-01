@@ -1,0 +1,30 @@
+<div class="flex py-8 px-16 capitalize items-center justify-center bg-gray-800 text-white">
+    <div class="flex-grow text-5xl">freexchange</div>
+    <div x-data="{ open: false }" class="text-6xl">
+        <i @click="open = true" class="fa fa-bars"></i>
+        <div x-show="open" @click.away="open = false" class="z-50 absolute right-0 bg-white text-gray-700 p-6 text-3xl mr-16 border border-gray-300 rounded-sm">
+            ebu nichapie sasa 
+        </div>
+    </div>
+</div>
+<div class="bg-gray-100 p-16 min-h-screen">
+    <div class="grid grid-cols-2 gap-6 text-5xl font-bold mb-4 text-white">
+        <div class="border shadow-2xl rounded-lg p-12 bg-blue-600">
+            <%= link_to 'buy shares', static_buy_path %>
+        </div>
+
+        <div class="border shadow-2xl rounded-lg p-12 bg-green-700">
+            sell shares
+        </div>
+    </div>
+
+    <div class="rounded-lg p-6 capitalize shadow-2xl">
+        <div class="text-5xl font-semibold my-4">account stats</div>
+        <div class="text-4xl font-normal py-4 space-y-4">
+            <div>balance: 5 shares</div>
+            <div>shares bought: 15</div>
+            <div>shares sold: 10</div>
+            <div>total profit: 6000kshs</div>
+        </div>
+    </div>
+</div>
